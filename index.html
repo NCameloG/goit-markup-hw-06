@@ -393,8 +393,8 @@
             <li><a href="tel:+525555296000" class="footerContact link">+525 555 296 000</a></li>
           </ul>
         </div>
-        <div class="footerSocial">
-          <h3 class="findUs">ENCUENTRENOS EN</h3>
+        <div class="footerItems">
+          <h3 class="footerTitle">ENCUENTRENOS EN</h3>
           <ul class="list socialList">
             <li>
               <a href="#" class="socialIcons footerSocialIcons">
@@ -426,29 +426,75 @@
             </li>
           </ul>
         </div>
+        <div class="footerItems">
+          <h3 class="footerTitle">Suscríbase al boletín informativo</h3>
+          <div class="subItems">
+            <form name="subForm" autocomplete="on" class="subFormat">
+              <div>
+                <label for="mail"></label>
+                <input
+                  class="subMail"
+                  type="email"
+                  id="mail"
+                  autofocus
+                  placeholder="Correo electrónico"
+                />
+              </div>
+            </form>
+            <a class="subSend" href="#">
+              <button type="button" class="subButton">Suscríbase</button>
+              <svg class="sendIcon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- Modal Main-Button -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="closeBack">
-          <svg class="closeButton" data-modal-close>
+        <div class="closeBack" data-modal-close>
+          <svg class="closeButton">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </div>
-        <div class="ask">
-          <h2 class="askTitle">Deje sus datos, nos contactaremos con usted</h2>
-          <form name="askService" autocomplete="on" class="askFormat">
-            <label for="userName">Nombre</label>
-            <input type="text" id="userName" autofocus />
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" />
-            <label for="email">E-Mail</label>
-            <input type="email" id="email">
-            <label for="commit">Comentarios</label>
-            <textarea id="commit" rows="5" placeholder="Introduzca el texto"></textarea>
+        <div class="form">
+          <h2 class="formTitle">Deje sus datos, nos contactaremos con usted</h2>
+          <form name="formService" autocomplete="on" class="formFormat">
+            <div class="nameField">
+              <label for="userName" class="formLabel">Nombre</label>
+              <div class="formField">
+                <input class="p0 formImput" type="text" id="userName" autofocus />
+                <svg class="formIcon"><use href="./images/icons.svg#icon-name"></use></svg>
+              </div>
+            </div>
+            <div class="phoneField">
+              <label for="phone" class="formLabel">Teléfono</label>
+              <div class="formField">
+                <input class="p0 formImput" type="tel" id="phone" />
+                <svg class="formIcon"><use href="./images/icons.svg#icon-name"></use></svg>
+              </div>
+            </div>
+            <div class="emailField">
+              <label for="email" class="formLabel">E-Mail</label>
+              <div class="formField">
+                <input class="p0 formImput" type="email" id="email" />
+                <svg class="formIcon"><use href="./images/icons.svg#icon-name"></use></svg>
+              </div>
+            </div>
+            <div class="reviewField">
+              <label for="review" class="formLabel">Comentarios</label>
+              <textarea class="review" id="review" placeholder="Introduzca el texto"></textarea>
+            </div>
           </form>
-          <label><input type="checkbox">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</label>
-          <button type="submit" class="askButton">Enviar</button>
+          <label class="formCheck">
+            <input type="checkbox" />
+            <p class="formCheckInfo">
+              Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+            </p>
+          </label>
+          <button type="submit" class="formButton">Enviar</button>
         </div>
       </div>
     </div>

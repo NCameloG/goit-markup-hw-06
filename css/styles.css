@@ -26,6 +26,9 @@ svg {
   fill: currentColor;
   transition: fill 250ms var(--cubic);
 }
+.p0 {
+  padding: 0;
+}
 .container {
   padding: 0;
   max-width: 1200px;
@@ -289,24 +292,97 @@ svg {
   cursor: pointer;
   position: fixed;
 }
-.ask {
+.closeButton:hover,
+.closeButton:focus {
+  fill: var(--selected-color);
+}
+.form {
   display: flex;
+  width: 581px;
+  height: 528px;
   flex-direction: column;
   margin: 0;
-  padding: 40px;
-  gap: 12px;
+  padding: 38px 41px 42px;
 }
-.askTitle {
+.formTitle {
   font: 700 20px/1.2em var(--main-font);
   margin: 0;
   text-align: center;
 }
-.askFormat {
+.formFormat {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
-.askButton {
+.formLabel {
+  line-height: 1.1;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 1);
+}
+.formField {
+  position: relative;
+}
+.formImput {
+  width: 100%;
+  padding: 11px 11px 11px 41px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  transition: border-color 250ms var(--cubic);
+}
+.formIcon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
+}
+.formImput:focus,
+.formImput:focus-within,
+.formImput:focus + .formIcon,
+.formImput:focus-within + .formIcon {
+  fill: var(--selected-color);
+  border-color: var(--selected-color);
+}
+.review {
+  border: solid 1px rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: none;
+  width: 100%;
+  height: 146px;
+  resize: none;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01;
+  transition: border-color 250ms var(--cubic);
+}
+.review:focus,
+.review:focus-within{
+  border-color: var(--selected-color);
+}
+.formCheck {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+.formCheckInfo {
+  width: 400px;
+  color: rgba(117, 117, 117, 1);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+.formButton {
   color: white;
   font-size: 16px;
   font-weight: 700;
@@ -320,9 +396,9 @@ svg {
   cursor: pointer;
   transition: var(--shadow-transition);
 }
-.askButton:hover,
-.askButton:focus,
-.askButton:active {
+.formButton:hover,
+.formButton:focus,
+.formButton:active {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
     0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
@@ -610,7 +686,7 @@ svg {
   display: flex;
   flex-direction: column;
 }
-.footerSocial {
+.footerItems {
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -636,12 +712,13 @@ svg {
   display: flex;
   color: white;
 }
-.findUs {
+.footerTitle {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.21;
   letter-spacing: 0.03em;
   color: white;
+  margin: 0;
 }
 .socialMedia {
   color: white;
@@ -661,5 +738,50 @@ svg {
 }
 .footerContact {
   color: rgba(255, 255, 255, 0.6);
+}
+.subItems {
+  display: flex;
+  gap: 12px;
+}
+.subMail {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  color: white;
+}
+.subSend {
+  position: relative;
+  width: 200px;
+  height: 50px;
+}
+.subButton {
+  background-color: var(--selected-color);
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  padding: 10px 72px 10px 39px;
+  transition: var(--shadow-transition);
+}
+.subButton:hover,
+.subButton:focus{
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.sendIcon {
+  width: 24px;
+  height: 24px;
+  fill: rgba(255, 255, 255, 1);
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
 }
 /* FOOTER */
