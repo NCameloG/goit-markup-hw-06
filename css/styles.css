@@ -363,7 +363,7 @@ svg {
   transition: border-color 250ms var(--cubic);
 }
 .review:focus,
-.review:focus-within{
+.review:focus-within {
   border-color: var(--selected-color);
 }
 .terms {
@@ -376,10 +376,10 @@ svg {
   cursor: pointer;
 }
 
-.terms:hover .checkboxUnchecked{
-  fill:var(--secondary-font);
+.terms:hover .checkboxUnchecked {
+  fill: var(--secondary-font);
 }
-.check{
+.check {
   width: 16px;
   height: 15px;
   position: absolute;
@@ -387,22 +387,22 @@ svg {
   top: 8%;
   transform: translateY(-8%);
 }
-.checkboxChecked{
-background-color: var(--selected-color);
-fill: white;
-opacity: 0;
-visibility: hidden;
-}
-.checkboxUnchecked{
-  opacity: 1;
-  visibility: visible;
-  }
-
-.checkbox:checked~.checkboxUnchecked{
+.checkboxChecked {
+  background-color: var(--selected-color);
+  fill: white;
   opacity: 0;
   visibility: hidden;
 }
-.checkbox:checked~.checkboxChecked{
+.checkboxUnchecked {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkbox:checked ~ .checkboxUnchecked {
+  opacity: 0;
+  visibility: hidden;
+}
+.checkbox:checked ~ .checkboxChecked {
   opacity: 1;
   visibility: visible;
 }
@@ -803,7 +803,7 @@ visibility: hidden;
   transition: var(--shadow-transition);
 }
 .subButton:hover,
-.subButton:focus{
+.subButton:focus {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
     0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
